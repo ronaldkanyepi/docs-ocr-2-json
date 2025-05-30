@@ -50,4 +50,15 @@ If you wish to run the application on your local machine:
     * Switch to the "Extracted Data (JSON)" tab to view the structured information extracted by the AI model.
     * If any errors occur during processing (e.g., unsupported file type, API issue), an error message will be displayed in the JSON output area.
 
+---
+title: OCRDocs2JSON
+emoji: 🧾
+colorFrom: indigo
+colorTo: blue
+sdk: gradio
+sdk_version: "4.26.0"
+app_file: app.py
+pinned: false
+---
+
 
