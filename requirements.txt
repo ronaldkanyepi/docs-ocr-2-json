@@ -1,0 +1,4 @@
+gradio
+gradio-pdf
+PyMuPDF
+requests
