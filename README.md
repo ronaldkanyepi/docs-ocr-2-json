@@ -1,12 +1,13 @@
 ---
 title: Zim Docs OCR-to-JSON Extractor
-emoji: 📄
+emoji: ⚡
 colorFrom: purple
 colorTo: blue
 sdk: gradio
-sdk_version: "3.40.1" # Replace with your actual Gradio version if known, or a recent one
-app_file: app.py # Assuming your main Python file is app.py
+sdk_version: 5.31.0
+app_file: app.py
 pinned: false
+license: mit
 ---
 
 # Zim Docs OCR-to-JSON Extractor
