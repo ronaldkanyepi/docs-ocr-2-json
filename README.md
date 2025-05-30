@@ -1,3 +1,14 @@
+---
+title: Zim Docs OCR-to-JSON Extractor
+emoji: 📄
+colorFrom: purple
+colorTo: blue
+sdk: gradio
+sdk_version: "3.40.1" # Replace with your actual Gradio version if known, or a recent one
+app_file: app.py # Assuming your main Python file is app.py
+pinned: false
+---
+
 # Zim Docs OCR-to-JSON Extractor
 
 ## Overview
@@ -35,7 +46,7 @@ If you wish to run the application on your local machine:
     ```bash
     python app.py
     ```
-    Replace `app.py` with the actual name of your Python file. It will typically be available at `http://127.0.0.1:7860`.
+    Your Python file should be named `app.py` (or update this command if it's different). It will typically be available at `http://127.0.0.1:7860`.
 
 ## How to Use
 
@@ -50,15 +61,18 @@ If you wish to run the application on your local machine:
     * Switch to the "Extracted Data (JSON)" tab to view the structured information extracted by the AI model.
     * If any errors occur during processing (e.g., unsupported file type, API issue), an error message will be displayed in the JSON output area.
 
----
-title: OCRDocs2JSON
-emoji: 🧾
-colorFrom: indigo
-colorTo: blue
-sdk: gradio
-sdk_version: "4.26.0"
-app_file: app.py
-pinned: false
+## Troubleshooting
+
+Here are some common issues you might encounter and how to resolve them:
+
+* **API Key Issues:** Ensure your `API_KEY` is correctly set as a Secret on Hugging Face Spaces (or as an environment variable for local testing). Also, verify that your key is valid and has sufficient credits/access for the chosen model.
+* **Dependency Errors:** If you're on Hugging Face, double-check your `requirements.txt` file. For local use, ensure all libraries are installed in your environment.
+* **File Conversion Failures:** For PDFs, `PyMuPDF (fitz)` needs to be available. Corrupted PDF files might also cause issues with conversion.
+* **Model Output/JSON Errors:**
+    * If the model doesn't return valid JSON, the application will attempt to report an error.
+    * The quality of the extracted JSON heavily depends on the clarity of your input document, the capabilities of the chosen vision model, and the effectiveness of the prompt used to guide the AI.
+* **Network Errors:** You'll need a stable internet connection for the application to make external API calls. These can fail due to network issues or timeouts. If you're on Hugging Face, this might relate to the Space's network access or API endpoint reachability.
+
 ---
 
-
+This README provides you with a concise guide to understanding, setting up, and using the Zim Docs OCR-to-JSON Extractor.
